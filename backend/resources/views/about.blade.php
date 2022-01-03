@@ -7,18 +7,13 @@
 			<h2>Feugiat lorem ipsum dolor sed veroeros</h2>
 			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
 		</div>
-		<div class="boxA">
-			<p>Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
-			<a href="#" class="button button-alt">More Info</a>
+		@foreach($articles as $articles)
+
+			<div class="boxA">
+			<p>{{ $articles->title }}</p>
+			<a href="/Article/{{ $articles->id }}" {{ $articles->excerpt }} class="button button-alt">More Info</a>
 		</div>
-		<div class="boxB">
-			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxC">
-			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
+		@endforeach
 	</div>
 </div>
 <div id="welcome">
